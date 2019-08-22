@@ -1,0 +1,97 @@
+$finger-size : 40px;
+$item-space : 25px;
+$max-width : 1240px;
+
+Body{
+    height: 100%;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.Header-Container{
+    max-width: $max-width;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+Header{
+    height: 75px;
+    background-color:#fff;
+    border-bottom: 3px solid green;
+    margin-bottom: $finger-size;
+}
+.Header-Logo{
+    height: 75px;
+    width: auto;
+}
+.Header-Button{
+    display: flex;
+    //flex-direction: column;//only vertical
+    align-items: center;//both vertical and horizonal
+    justify-content: flex-end;
+
+    button{
+        padding:10px 15px 10px 15px;
+        margin-right: $item-space;
+    }
+}
+
+.Container{
+    max-width: $max-width;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.Login-Full{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 600px 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: $item-space;
+    background-color:#fff;
+}
+.Login-Item{
+    display: block;
+    height: $finger-size;
+    margin-top: $item-space;
+
+    width: 75%;
+    &:focus{
+        outline-width: 0; //Focuslandığında ki mavi çizgileri siliyoruz
+        box-shadow: 5px 10px 15px 0 rgba(126, 107, 107, 0.3);
+    }
+}
+
+.Login-Button,.Register{
+    width: 75%;
+    border:none;
+    height: $finger-size;
+    margin-top: $item-space;
+    margin-bottom: $item-space;
+    padding-left: 10px;
+}
+.Login-Left-Img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.Login-Text{
+    text-align: center;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.FooterLogo{
+    height: 35px;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,116 @@
+$finger-size : 40px;
+$item-space : 25px;
+$max-width : 1240px;
+body{
+   background-color: #f1f1f1;
+}
+.Header-Container{
+    max-width: $max-width;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+Header{
+    height: 75px;
+    background-color:#fff;
+    border-bottom: 3px solid green;
+    margin-bottom: $finger-size;
+}
+.Header-Logo{
+    height: 75px;
+    width: auto;
+}
+.Header-Button{
+    display: flex;
+    //flex-direction: column;//only vertical
+    align-items: center;//both vertical and horizonal
+    justify-content: flex-end;
+
+    button{
+        padding:10px 15px 10px 15px;
+        margin-right: $item-space;
+    }
+}
+.Container{
+    max-width: $max-width;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.Content{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 300px 1fr;
+    grid-column-gap: 15px;
+}
+.Right-Menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.User-Detail{
+    text-align: center;
+    margin-bottom: $item-space;
+}
+.User-Logo{
+    height: 100px;
+    width: auto;
+    &:hover{
+        box-shadow: 5px 10px 15px 0 rgba(68, 64, 64, 0.5);
+    }
+}
+
+.Right-Menu-Button{
+    margin-left: 20px;
+    width: 100%;
+    margin-bottom: $item-space;
+    height: $finger-size+10px;
+    border:none;
+    transition: 0.4s;
+    border-radius: 20px;
+    &:active,&:hover{
+        background-color: #26A3FF;
+        font-weight: 700;
+        color:#fff;
+        box-shadow: 5px 10px 15px 0 rgba(68, 64, 64, 0.5);
+    }
+}
+.Right-Menu-Function{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.firstButton{
+    margin-right: 25px;
+}
+.Right-Menu-Function-Button{
+    margin-bottom: $item-space;
+    margin-left: 20px;
+    width: 125px;
+    height: $finger-size+10px;
+    border:none;
+    transition: 0.4s;
+    border-radius: 20px;
+    &:active,&:hover{
+        background-color: #26A3FF;
+        font-weight: 700;
+        color:#fff;
+        box-shadow: 5px 10px 15px 0 rgba(68, 64, 64, 0.5);
+
+    }
+}
+.Card{
+    background-color: #fff;
+    margin-right: 165px;
+    padding:15px 20px 15px 20px;
+}
+
+.Card-Footer{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    p{
+        padding-right: 15px;
+    }
+}

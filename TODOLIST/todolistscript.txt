@@ -1,0 +1,31 @@
+create database TODOLISTDB
+
+use TODOLISTDB
+
+create table USERS
+(
+ID int primary key identity(1,1) not null,
+NAME varchar(200) not null,
+PASS varchar(200) not null,
+MAIL varchar(200) not null
+)
+create table TODOLISTCATEGORY
+(
+ID int primary key identity(1,1) not null,
+NAME varchar(200) not null,
+USERSID int not null,
+foreign key(USERSID) references USERS(ID)
+)
+create table TODOLIST
+(
+ID int primary key identity(1,1) not null,
+NAME varchar(200) not null,
+EX varchar(200) not null,
+STAT int not null,
+DAT varchar(10) not null,
+LASTDAT varchar(10) not null,
+LISTID int not null,
+USERSID int not null,
+foreign key(USERSID) references USERS(ID),
+foreign key(LISTID) references TODOLISTCATEGORY(ID)
+)
